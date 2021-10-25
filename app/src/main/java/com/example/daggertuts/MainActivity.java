@@ -10,10 +10,14 @@ import android.widget.TextView;
 import com.example.daggertuts.Di.DaggerMainViewModelInjector;
 import com.example.daggertuts.basics.MainViewModel;
 
+import javax.inject.Inject;
+
 public class MainActivity extends AppCompatActivity {
 
     TextView textView;
     Button connect;
+
+    @Inject
     MainViewModel mainViewModel;
 
     @Override
@@ -22,7 +26,9 @@ public class MainActivity extends AppCompatActivity {
         setContentView(R.layout.activity_main);
         textView  = findViewById(R.id.textView);
         connect  = findViewById(R.id.connect);
-        mainViewModel =  DaggerMainViewModelInjector.create().getMainViewModel();
+
+        DaggerMainViewModelInjector.create().injectFields(this);
+
         connect.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View view) {

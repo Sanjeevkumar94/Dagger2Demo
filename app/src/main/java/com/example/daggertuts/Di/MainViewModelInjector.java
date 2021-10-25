@@ -1,5 +1,6 @@
 package com.example.daggertuts.Di;
 
+import com.example.daggertuts.MainActivity;
 import com.example.daggertuts.basics.MainViewModel;
 
 import dagger.Component;
@@ -7,5 +8,6 @@ import dagger.Component;
 
 @Component
 public interface MainViewModelInjector {
-    MainViewModel getMainViewModel();
+
+    void injectFields(MainActivity mainActivity);
 }

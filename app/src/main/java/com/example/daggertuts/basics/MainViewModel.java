@@ -1,5 +1,7 @@
 package com.example.daggertuts.basics;
 
+import android.util.Log;
+
 import com.example.daggertuts.network.NetworkClient;
 
 import javax.inject.Inject;
@@ -10,6 +12,7 @@ public class MainViewModel {
 
     @Inject
     public MainViewModel(NetworkClient networkClient) {
+        Log.d("myTag","MainViewModelCalled");
         this.mClient = networkClient;
     }
 

@@ -1,5 +1,7 @@
 package com.example.daggertuts.network;
 
+import android.util.Log;
+
 import javax.inject.Inject;
 
 public class NetworkClient {
@@ -7,6 +9,7 @@ public class NetworkClient {
 
     @Inject
     public NetworkClient(NetworkConnection connection) {
+        Log.d("myTag","NetworkClientCalled");
         this.mConnection = connection;
     }
 
