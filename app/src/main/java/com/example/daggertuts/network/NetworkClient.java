@@ -9,7 +9,6 @@ public class NetworkClient {
 
     @Inject
     public NetworkClient(NetworkConnection connection) {
-        Log.d("myTag","NetworkClientCalled");
         this.mConnection = connection;
     }
 

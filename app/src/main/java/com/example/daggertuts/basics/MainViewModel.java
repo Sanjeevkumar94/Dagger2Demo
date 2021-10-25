@@ -8,12 +8,12 @@ import javax.inject.Inject;
 
 public class MainViewModel {
 
-    private NetworkClient mClient;
+    @Inject
+     NetworkClient mClient;
 
     @Inject
-    public MainViewModel(NetworkClient networkClient) {
+    public MainViewModel() {
         Log.d("myTag","MainViewModelCalled");
-        this.mClient = networkClient;
     }
 
     public String fetchData(){

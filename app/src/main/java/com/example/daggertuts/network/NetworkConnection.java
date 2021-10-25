@@ -13,7 +13,6 @@ public class NetworkConnection {
 
     @Inject
     public NetworkConnection(){
-        Log.d("myTag","NetworkConnectionCalled");
 
         if(BuildConfig.DEBUG){
             this.mEndpoint= Constants.DEBUG_ENDPOINT;
